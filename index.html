@@ -1,12 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | Daniel Mtz </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portafolio | Daniel Mtz </title>
+	<link href="./css/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+	<link href="./css/vendor/normalize/normalize.css" rel="stylesheet">
+	<link href="./css/app.css" rel="stylesheet">
+
 </head>
+
 <body>
-    
-    <h1>Portafolio de trabajos</h1>
+	<header>
+		<!-- container header -->
+		<div class="container">
+			<nav class="menu">
+				<a href="#">Acerca de </a>
+				<a href="#">Trabajo</a>
+				<a href="#">Contacto</a>
+			</nav>
+			<div class="container-text">
+				<div class="text">
+					<h1 class="name">Daniel Martinez Sierra</h1>
+					<h2 class="profession">Desarrollador web</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Seccion principal -->
+	<section class="main">
+		<section class="acerca-de">
+			<!-- Acerca de -->
+			<div class="container">
+				<div class="foto">
+					<img src="img/foto.jpg" width="115" height="115" alt="Daniel Martinez">
+				</div>
+				<div class="text">
+					<h3 class="titulo">Acerca de</h3>
+					<p>Lorem ipsum dolor sit amet, <span class="bold">consectetur adipisicing</span> elit. Provident
+						officia assumenda, ex doloribus sunt ducimus voluptas nostrum cum sed doloremque ullam tempora
+						velit maiores, sapiente quam illum necessitatibus dolores repellendus!</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Trabajos -->
+		<section class="trabajos">
+
+			<div class="container">
+				<h3 class="titulo">Trabajos</h3>
+				<div class="container-trabajos">
+					<div class="trabajo">
+						<div class="thumb">
+							<img src="img/1.jpg" width="300" height="200" alt="Trabajos en linea">
+						</div>
+						<div class="descripcion">
+							<p class="nombre">Trabajos en linea</p>
+							<p class="categoria">Programacion</p>
+						</div>
+					</div>
+
+					<div class="trabajo">
+						<div class="thumb">
+							<img src="img/2.jpg" width="300" height="200" alt="Trabajos en linea">
+						</div>
+						<div class="descripcion">
+							<p class="nombre">Trabajos en linea</p>
+							<p class="categoria">Programacion</p>
+						</div>
+					</div>
+
+					<div class="trabajo">
+						<div class="thumb">
+							<img src="img/3.jpg" width="300" height="200" alt="Trabajos en linea">
+						</div>
+						<div class="descripcion">
+							<p class="nombre">Trabajos en linea</p>
+							<p class="categoria">Programacion</p>
+						</div>
+					</div>
+
+					<div class="trabajo">
+						<div class="thumb">
+							<img src="img/4.jpg" width="300" height="200" alt="Trabajos en linea">
+						</div>
+						<div class="descripcion">
+							<p class="nombre">Trabajos en linea</p>
+							<p class="categoria">Programacion</p>
+						</div>
+					</div>
+
+					<div class="trabajo">
+						<div class="thumb">
+							<img src="img/5.jpg" width="300" height="200" alt="Trabajos en linea">
+						</div>
+						<div class="descripcion">
+							<p class="nombre">Trabajos en linea</p>
+							<p class="categoria">Programacion</p>
+						</div>
+					</div>
+
+					<div class="trabajo">
+						<div class="thumb">
+							<img src="img/6.jpg" width="300" height="200" alt="Trabajos en linea">
+						</div>
+						<div class="descripcion">
+							<p class="nombre">Trabajos en linea</p>
+							<p class="categoria">Programacion</p>
+						</div>
+					</div>
+
+					<div class="trabajo">
+						<div class="thumb">
+							<img src="img/7.jpg" width="300" height="200" alt="Diseño web">
+						</div>
+						<div class="descripcion">
+							<p class="nombre">Trabajos en linea</p>
+							<p class="categoria">Programacion</p>
+						</div>
+					</div>
+
+					<div class="trabajo">
+						<div class="thumb">
+							<img src="img/8.jpg" width="300" height="200" alt="Redes">
+						</div>
+						<div class="descripcion">
+							<p class="nombre">Trabajos en linea</p>
+							<p class="categoria">Programacion</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<footer>
+		<section class="contact">
+			<div class="container">
+				<h3 class="title">Contacto</h3>
+				<form action="#" class="form--contact">
+					<input type="text" placeholder="Nombre" title="Nombre" name="nombre" required autocomplete="off">
+					<input type="email" placeholder="Correo" title="Correo" name="correo" required autocomplete="off">
+					<textarea name="mensaje" title="Mensaje" placeholder="Mensaje" autocomplete="off"></textarea>
+					<input class="boton" type="submit" value="Enviar">
+				</form>
+			</div>
+		</section>
+		<section class="social-network">
+			<div class="container">
+				<a href="#" class="twitter"> <i class="fab fa-twitter"></i></a>
+				<a href="#" class="facebook"> <i class="fab fa-facebook"></i></a>
+				<a href="#" class="youtube"> <i class="fab fa-youtube"></i></a>
+				<a href="#" class="git"><i class="fab fa-github"></i></a>
+				<a href="#" class="ins"> <i class="fab fa-instagram-square"></i></a>
+			</div>
+		</section>
+	</footer>
 </body>
+
 </html>
