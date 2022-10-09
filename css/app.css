@@ -1,3 +1,13 @@
+:root{
+	--main-color:#3498db;
+    --second-color: #000000;
+    --white-color:#fff;
+    --gray-light-color:#f3f3f3;
+    --gray-color: #ccc;
+    --gray-dark-color: #666;
+}
+
+
 /*Quita las propiedades por defecto*/
 *{
 	-webkit-box-sizing: border-box;
@@ -11,6 +21,10 @@ body
 	background: #fff;
 	font-family: "Open Sans",Sans-serif;
 	font-size: 16px;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /************************** Contenedor padre ******************************/
@@ -93,6 +107,11 @@ header .container-text .text .profession
 }
 
 /************************** Contenido del main **********************************************+*/
+
+.about > article{
+    margin-bottom: 2rem;
+}
+
 .main .container
 {
 	overflow: visible;
@@ -204,6 +223,35 @@ header .container-text .text .profession
 {
 	font-size: 14px;
 	color: #636363;
+}
+
+progress{
+    width: 100%;
+    height: 1rem;
+    background-color: var(--gray-color);
+}
+
+progress::-webkit-progress-bar{
+    background-color: var(--gray-color);
+}
+
+progress::-webkit-progress-value{
+    background-color: var(--gray-dark-color);
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--gray-dark-color); /*firefox*/
+}
+
+.progress{
+    margin: 1rem auto;
+}
+
+.progress > p {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: .85rem;
 }
 
 /***************************** footer  ***************************************/
@@ -344,6 +392,64 @@ footer .social-network .ins:hover { background: #405de6;}
 }
 
 
+/** SCROLL BUTTON */
+
+.scroll-top-btn {
+    position: fixed;
+    z-index: 995;
+    bottom: 1vh;
+    right: calc(4.25rem + 1vw);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color:var(--second-color);
+    cursor:pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+
+.scroll-top-btn:hover{
+    background-color: var(--second-color);
+    color:var(--main-color);
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+/** UTILERIAS */
+.gray-scale{
+    filter: grayscale(1);
+}
+
+.section{
+    padding: 2rem 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .full-lg-screen{
+        width: 100%;
+        min-width: 100vh;
+    }
+
+    .text-lg-center{
+        text-align: center;
+    }
+
+    .text-lg-left{
+        text-align: left;
+    }
+
+    .text-lg-right {
+        text-align: right;
+    }
+}
 
 
 

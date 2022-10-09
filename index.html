@@ -29,9 +29,9 @@
 		<!-- container header -->
 		<div class="container">
 			<nav class="menu">
-				<a href="#">Acerca de </a>
-				<a href="#">Trabajo</a>
-				<a href="#">Contacto</a>
+				<a href="#acerca-de">Acerca de </a>
+				<a href="#trabajos">Trabajo</a>
+				<a href="#contacto">Contacto</a>
 			</nav>
 			<div class="container-text">
 				<div class="text">
@@ -44,12 +44,13 @@
 
 	<!-- Seccion principal -->
 	<section class="main">
-		<section class="acerca-de">
+		<section class="acerca-de" id="acerca-de">
 			<!-- Acerca de -->
 			<div class="container">
-				<div class="foto">
+				<div class="foto gray-scale">
 					<img src="img/foto.jpg" width="115" height="115" alt="Daniel Martinez">
 				</div>
+
 				<div class="text">
 					<h3 class="titulo">Acerca de</h3>
 					<p>
@@ -57,11 +58,55 @@
 					</p>
 				</div>
 			</div>
+
+			<section class="container">
+				<article>
+					<h2 class="text-center">Mis Habilidades</h2>
+					<div class="progress">
+						<p>
+							<b>Desarrollo <i>web Frontent</i></b>
+							<b>75%</b>
+						</p>
+						<progress value="90" min="0" max="100"></progress>
+					</div>
+
+					<div class="progress">
+						<p>
+							<b>Desarrollo <i>Backend</i></b>
+							<b>85%</b>
+						</p>
+						<progress value="85" min="0" max="100"></progress>
+					</div>
+
+					<div class="progress">
+						<p>
+							<b>Desarollo <i>móvil</i></b>
+							<b>60%</b>
+						</p>
+						<progress value="60" min="0" max="100"></progress>
+					</div>
+
+					<div class="progress">
+						<p>
+							<b><i>Base de datos</i></b>
+							<b>85%</b>
+						</p>
+						<progress value="85" min="0" max="100"></progress>
+					</div>
+
+					<div class="progress">
+						<p>
+							<b>Servidores y S.O </b>
+							<b>80%</b>
+						</p>
+						<progress value="75" min="0" max="100"></progress>
+					</div>
+				</article>
+			</section>
 		</section>
 
 		<!-- Trabajos -->
-		<section class="trabajos">
-
+		<section class="trabajos" id="trabajos">
 			<div class="container">
 				<h3 class="titulo">Trabajos</h3>
 				<div class="container-trabajos">
@@ -150,14 +195,35 @@
 		</section>
 	</section>
 
+	<button class='scroll-top-btn hidden'>&#11014;</button>
+
 	<footer>
-		<section class="contact">
+		<section class="contact" id="contacto">
 			<div class="container">
 				<h3 class="title">Contacto</h3>
-				<form action="#" class="form--contact">
-					<input type="text" placeholder="Nombre" title="Nombre" name="nombre" required autocomplete="off">
-					<input type="email" placeholder="Correo" title="Correo" name="correo" required autocomplete="off">
-					<textarea name="mensaje" title="Mensaje" placeholder="Mensaje" autocomplete="off"></textarea>
+				<form class="form--contact">
+					<input type="text"
+						placeholder="Nombre"
+						title="Acepta letras y números"
+						name="nombre"
+						required
+						autocomplete="off"
+						pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+						>
+
+					<input type="email"
+						placeholder="Correo"
+						title="Correo"
+						name="correo"
+						required
+						autocomplete="off"
+						pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+
+					<textarea
+						name="mensaje"
+						title="Mensaje"
+						placeholder="Mensaje" autocomplete="off"></textarea>
+
 					<input class="boton" type="submit" value="Enviar">
 				</form>
 			</div>
@@ -170,6 +236,8 @@
 			</div>
 		</section>
 	</footer>
+
+	<script src="./js/app.js"></script>
 </body>
 
 </html>
