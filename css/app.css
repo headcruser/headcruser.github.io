@@ -5,6 +5,7 @@
     --gray-light-color:#f3f3f3;
     --gray-color: #ccc;
     --gray-dark-color: #666;
+	--black-alpha-color:rgba(0,0,0,0.5);
 }
 
 
@@ -328,6 +329,20 @@ footer .contact .formulario textarea:focus{
 	border: 2px solid #3895ea;
 }
 
+.contact-form-response{
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: var(--white-color);
+}
+
+.contact-form-response svg{
+    margin-top: 2rem;
+    width: 4rem;
+    height: 4rem;
+    fill: var(--main-color);
+}
+
 /******************************** Redes Sociales ************************************/
 footer .social-network
 {
@@ -417,13 +432,56 @@ footer .social-network .ins:hover { background: #405de6;}
     color:var(--main-color);
 }
 
+/** MODAL */
+
+.modal#gracias:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-alpha-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .1s;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.modal-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.modal-close svg {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--first-color);
+}
+
+
+/** UTILERIAS */
+
+.none{
+    display: none;
+}
+
 .hidden{
     visibility: hidden;
     opacity: 0;
-
 }
-
-/** UTILERIAS */
 .gray-scale{
     filter: grayscale(1);
 }
