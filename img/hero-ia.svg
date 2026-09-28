@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" role="img" aria-labelledby="titulo">
+	<title id="titulo">Documentos que se convierten en datos y alimentan una red neuronal</title>
+	<defs>
+		<pattern id="puntos" width="20" height="20" patternUnits="userSpaceOnUse">
+			<circle cx="10" cy="10" r="1" fill="#2A2D35"/>
+		</pattern>
+		<radialGradient id="brillo" cx="320" cy="160" r="150" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#1D5BD8" stop-opacity="0.35"/>
+			<stop offset="1" stop-color="#1D5BD8" stop-opacity="0"/>
+		</radialGradient>
+	</defs>
+
+	<!-- Fondo -->
+	<rect width="400" height="500" fill="#15171C"/>
+	<rect width="400" height="500" fill="url(#puntos)"/>
+	<rect width="400" height="500" fill="url(#brillo)"/>
+
+	<!-- Pistas de circuito -->
+	<g fill="none" stroke="#2E313A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M368 200 V300 H300 V360"/>
+		<path d="M322 235 V280 H250 V420 H200"/>
+		<path d="M272 210 V250 H220 V330"/>
+		<path d="M368 300 H392"/>
+	</g>
+	<g fill="#15171C" stroke="#3A3D46" stroke-width="2">
+		<circle cx="300" cy="360" r="5"/>
+		<circle cx="200" cy="420" r="5"/>
+		<circle cx="220" cy="330" r="5"/>
+	</g>
+
+	<!-- Documentos -->
+	<g transform="translate(40 180)">
+		<rect x="0" y="0" width="110" height="140" rx="8" fill="#1E2027" stroke="#3A3D46" stroke-width="1.5" transform="rotate(-8 55 70) translate(-10 6)"/>
+		<rect x="0" y="0" width="110" height="140" rx="8" fill="#1E2027" stroke="#555963" stroke-width="1.5" transform="rotate(-4 55 70) translate(-5 3)"/>
+		<rect x="0" y="0" width="110" height="140" rx="8" fill="#1E2027" stroke="#C9CBD1" stroke-width="1.5"/>
+		<rect x="14" y="16" width="50" height="8" rx="2" fill="#C9CBD1"/>
+		<rect x="14" y="40" width="82" height="4" rx="2" fill="#555963"/>
+		<rect x="14" y="54" width="70" height="4" rx="2" fill="#555963"/>
+		<rect x="14" y="68" width="78" height="4" rx="2" fill="#555963"/>
+		<rect x="14" y="82" width="56" height="4" rx="2" fill="#555963"/>
+		<rect x="14" y="100" width="82" height="24" rx="3" fill="none" stroke="#555963" stroke-width="1.5"/>
+		<line x1="55" y1="100" x2="55" y2="124" stroke="#555963" stroke-width="1.5"/>
+	</g>
+
+	<!-- Datos: pixeles que salen del documento -->
+	<g>
+		<rect x="158" y="236" width="8" height="8" rx="1.5" fill="#555963"/>
+		<rect x="170" y="262" width="5" height="5" rx="1" fill="#3A3D46"/>
+		<rect x="176" y="222" width="6" height="6" rx="1" fill="#8A8E97"/>
+		<rect x="180" y="248" width="6" height="6" rx="1" fill="#555963"/>
+		<rect x="184" y="200" width="4" height="4" rx="1" fill="#3A3D46"/>
+		<rect x="188" y="212" width="5" height="5" rx="1" fill="#555963"/>
+		<rect x="192" y="230" width="8" height="8" rx="1.5" fill="#8A8E97"/>
+		<rect x="200" y="244" width="5" height="5" rx="1" fill="#8A8E97"/>
+		<rect x="204" y="216" width="7" height="7" rx="1.5" fill="#9DB9FF"/>
+		<rect x="210" y="252" width="4" height="4" rx="1" fill="#3A3D46"/>
+		<rect x="214" y="198" width="6" height="6" rx="1" fill="#9DB9FF"/>
+		<rect x="218" y="226" width="5" height="5" rx="1" fill="#555963"/>
+		<rect x="226" y="204" width="8" height="8" rx="1.5" fill="#1D5BD8"/>
+		<rect x="232" y="186" width="6" height="6" rx="1" fill="#9DB9FF"/>
+		<rect x="238" y="214" width="5" height="5" rx="1" fill="#1D5BD8"/>
+		<rect x="244" y="174" width="5" height="5" rx="1" fill="#9DB9FF"/>
+		<rect x="246" y="194" width="7" height="7" rx="1.5" fill="#1D5BD8"/>
+		<rect x="254" y="182" width="6" height="6" rx="1" fill="#1D5BD8"/>
+	</g>
+
+	<!-- Red neuronal: conexiones -->
+	<g stroke="#3A3D46" stroke-width="1">
+		<line x1="272" y1="110" x2="322" y2="85"/>
+		<line x1="272" y1="110" x2="322" y2="185"/>
+		<line x1="272" y1="110" x2="322" y2="235"/>
+		<line x1="272" y1="160" x2="322" y2="85"/>
+		<line x1="272" y1="160" x2="322" y2="185"/>
+		<line x1="272" y1="160" x2="322" y2="235"/>
+		<line x1="272" y1="210" x2="322" y2="85"/>
+		<line x1="272" y1="210" x2="322" y2="135"/>
+		<line x1="272" y1="210" x2="322" y2="235"/>
+		<line x1="322" y1="85" x2="368" y2="120"/>
+		<line x1="322" y1="85" x2="368" y2="200"/>
+		<line x1="322" y1="135" x2="368" y2="200"/>
+		<line x1="322" y1="185" x2="368" y2="120"/>
+		<line x1="322" y1="235" x2="368" y2="120"/>
+		<line x1="322" y1="235" x2="368" y2="200"/>
+	</g>
+	<g stroke="#1D5BD8" stroke-width="2" stroke-linecap="round">
+		<line x1="272" y1="110" x2="322" y2="135"/>
+		<line x1="272" y1="160" x2="322" y2="135"/>
+		<line x1="272" y1="210" x2="322" y2="185"/>
+		<line x1="322" y1="135" x2="368" y2="120"/>
+		<line x1="322" y1="185" x2="368" y2="200"/>
+	</g>
+
+	<!-- Red neuronal: nodos -->
+	<g fill="#1D5BD8" opacity="0.22">
+		<circle cx="272" cy="160" r="16"/>
+		<circle cx="322" cy="135" r="18"/>
+		<circle cx="368" cy="120" r="16"/>
+		<circle cx="322" cy="185" r="14"/>
+	</g>
+	<g fill="#15171C" stroke="#C9CBD1" stroke-width="1.5">
+		<circle cx="272" cy="110" r="7"/>
+		<circle cx="272" cy="210" r="7"/>
+		<circle cx="322" cy="85" r="7"/>
+		<circle cx="322" cy="235" r="7"/>
+		<circle cx="368" cy="200" r="7"/>
+	</g>
+	<g fill="#1D5BD8" stroke="#9DB9FF" stroke-width="1.5">
+		<circle cx="272" cy="160" r="8"/>
+		<circle cx="322" cy="135" r="9"/>
+		<circle cx="322" cy="185" r="7"/>
+		<circle cx="368" cy="120" r="8"/>
+	</g>
+
+	<!-- Destellos de IA -->
+	<path d="M345 32 C347 44 349 46 361 48 C349 50 347 52 345 64 C343 52 341 50 329 48 C341 46 343 44 345 32 Z" fill="#9DB9FF"/>
+	<path d="M376 62 C377 68 378 69 384 70 C378 71 377 72 376 78 C375 72 374 71 368 70 C374 69 375 68 376 62 Z" fill="#1D5BD8"/>
+	<path d="M300 44 C301 48 302 49 306 50 C302 51 301 52 300 56 C299 52 298 51 294 50 C298 49 299 48 300 44 Z" fill="#C9CBD1"/>
+</svg>

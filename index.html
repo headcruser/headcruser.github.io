@@ -3,217 +3,385 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portafolio | Daniel Martinez Sierra </title>
-	<meta name="description" content="Hola bienvenid@ a mi Portafolio Profesional, soy Daniel Martinez Sierra, Desarrollador Web">
-	<meta name="theme-color" content="#3895ea">
-	<meta name="twitter:card" content="summary">
+	<title>Daniel Martínez Sierra | Desarrollador de software</title>
+	<meta name="description" content="Portafolio de Daniel Martínez Sierra, desarrollador de software desde 2018. Sistemas a la medida para empresas que buscan hacer más eficientes sus procesos internos.">
+	<meta name="theme-color" content="#15171C">
 
-	<meta name="theme-color" content="#d9006">
-    <meta name="twitter:card" content="summary">
-    <meta property="og:type" content="website">
-    <meta property="og:title" name="twitter:title" content="Portafolio CV - headcruser">
-    <meta property="og:description" name="twitter:description" content="Hola bienvenid@ a mi Portafolio Profesional, soy Daniel Martinez Sierra, Desarrollador Web">
+	<meta name="twitter:card" content="summary">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://headcruser.com/">
+	<meta property="og:title" name="twitter:title" content="Daniel Martínez Sierra | Desarrollador de software">
+	<meta property="og:description" name="twitter:description" content="Sistemas a la medida que automatizan los procesos de las empresas.">
+	<meta property="og:image" content="https://headcruser.com/img/foto.jpg">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/img/favicon/site.webmanifest">
 
-	<link href="./css/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 	<link href="./css/vendor/normalize/normalize.css" rel="stylesheet">
 	<link href="./css/app.css" rel="stylesheet">
 </head>
 
 <body>
-	<header>
-		<!-- container header -->
-		<div class="container">
-			<nav class="menu">
-				<a href="#acerca-de">Acerca de </a>
+	<!-- Encabezado -->
+	<header class="header">
+		<div class="container header__bar">
+			<a href="#inicio" class="brand">
+				<span class="brand__mark">DM</span>
+				<span class="brand__name">Daniel Martínez</span>
+			</a>
+
+			<button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" x2="20" y1="7" y2="7"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="17" y2="17"/></svg>
+			</button>
+
+			<nav class="menu" id="menu" aria-label="Principal">
+				<a href="#acerca-de">Acerca de</a>
+				<a href="#stack">Stack</a>
 				<a href="#trabajos">Proyectos</a>
-				<a href="#contacto">Contacto</a>
-				<a target="_blank" href="./assets//cv_dms.pdf">CV</a>
+				<a href="#experiencia">Experiencia</a>
+				<a href="#contacto" class="menu__cta">Contacto</a>
 			</nav>
-			<div class="container-text">
-				<div class="text">
-					<h1 class="name">Daniel Martinez Sierra</h1>
-					<h2 class="profession">Desarrollador web</h2>
-				</div>
-			</div>
 		</div>
 	</header>
 
-	<!-- Seccion principal -->
-	<section class="main">
-		<section class="acerca-de" id="acerca-de">
-			<!-- Acerca de -->
-			<div class="container">
-				<div class="foto gray-scale">
-					<img src="img/foto.jpg" width="115" height="115" alt="Daniel Martinez">
-				</div>
-
-				<div class="text">
-					<h3 class="titulo">Acerca de</h3>
-					<p>
-						Desde principios de 2018 comencé a sumergirme en el desarrollo de software.
-						He trabajado diversos proyectos en donde se requiere automatizar los procesos
-						ya existentes. Me gusta ser autodidacta y aprender cosas nuevas en mi dia a dia.
+	<main>
+		<!-- Inicio -->
+		<section class="hero" id="inicio">
+			<div class="container hero__grid">
+				<div class="hero__text">
+					<p class="status"><span class="status__dot"></span>Disponible para nuevas oportunidades</p>
+					<h1 class="hero__title">Automatizo los procesos de las empresas con <span class="accent">software a la medida.</span></h1>
+					<p class="hero__lead">
+						Soy Daniel Martínez Sierra, desarrollador de software desde 2018.
+						Construyo sistemas para empresas que buscan hacer más eficientes sus procesos internos.
 					</p>
+					<div class="hero__actions">
+						<a href="#trabajos" class="btn btn--primary">
+							Ver proyectos
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+						</a>
+						<a href="./assets/cv_dms.pdf" target="_blank" rel="noopener" class="btn btn--outline">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+							Descargar CV
+						</a>
+					</div>
 				</div>
+
+				<figure class="hero__photo">
+					<img src="img/hero-ia.svg" width="400" height="500" alt="Ilustración: documentos que se convierten en datos y alimentan una red neuronal">
+					<figcaption class="hero__badge">
+						<span class="hero__badge-num">+8</span>
+						<span>años construyendo<br>software empresarial</span>
+					</figcaption>
+				</figure>
 			</div>
-
-			<section class="container">
-				<article>
-					<h2 class="text-center">Mis Habilidades</h2>
-					<div class="progress">
-						<p>
-							<b>Desarrollo <i>web Frontent</i></b>
-							<b>75%</b>
-						</p>
-						<progress value="90" min="0" max="100"></progress>
-					</div>
-
-					<div class="progress">
-						<p>
-							<b>Desarrollo <i>Backend</i></b>
-							<b>85%</b>
-						</p>
-						<progress value="85" min="0" max="100"></progress>
-					</div>
-
-					<div class="progress">
-						<p>
-							<b>Desarollo <i>móvil</i></b>
-							<b>60%</b>
-						</p>
-						<progress value="60" min="0" max="100"></progress>
-					</div>
-
-					<div class="progress">
-						<p>
-							<b><i>Base de datos</i></b>
-							<b>85%</b>
-						</p>
-						<progress value="85" min="0" max="100"></progress>
-					</div>
-
-					<div class="progress">
-						<p>
-							<b>Servidores y S.O </b>
-							<b>80%</b>
-						</p>
-						<progress value="75" min="0" max="100"></progress>
-					</div>
-				</article>
-			</section>
 		</section>
 
-		<!-- Trabajos -->
-		<section class="trabajos" id="trabajos">
+		<!-- Acerca de -->
+		<section class="section section--white" id="acerca-de">
+			<div class="container split">
+				<div class="split__head">
+					<p class="eyebrow">01 · Acerca de</p>
+					<h2 class="section__title">Del proceso manual al sistema que lo resuelve.</h2>
+				</div>
+				<div class="split__body">
+					<p class="about__text">
+						Desde 2018 trabajo en proyectos donde hay que automatizar procesos que ya existen:
+						facturación, mesa de ayuda, ERP y digitalización de flujos internos.
+						Mi compromiso es entregar productos que realmente apoyen al cliente final en su trabajo diario.
+					</p>
+					<dl class="facts">
+						<div class="fact">
+							<dt>Ubicación</dt>
+							<dd>Celaya, Gto., México</dd>
+						</div>
+						<div class="fact">
+							<dt>Modalidad</dt>
+							<dd>Híbrido</dd>
+						</div>
+						<div class="fact">
+							<dt>Idiomas</dt>
+							<dd>Español · Inglés intermedio</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+		</section>
+
+		<!-- Stack -->
+		<section class="section" id="stack">
 			<div class="container">
-				<h3 class="titulo">Proyectos</h3>
-				<div class="container-trabajos">
-					<div class="trabajo">
-						<div class="thumb">
-							<img src="img/proyectos/covemex.png" width="300" height="200" alt="Covemex">
-						</div>
-						<div class="descripcion">
-							<p class="nombre">Covemex </p>
-							<p class="categoria">ERP Regina</p>
-						</div>
+				<div class="section__head">
+					<div>
+						<p class="eyebrow">02 · Stack</p>
+						<h2 class="section__title">Con qué trabajo</h2>
 					</div>
+					<ul class="legend">
+						<li><span class="legend__box legend__box--solid"></span>Uso diario</li>
+						<li><span class="legend__box"></span>Conocimiento</li>
+					</ul>
+				</div>
 
-					<div class="trabajo">
-						<div class="thumb">
-							<img src="img/proyectos/grupo_u.png" width="300" height="200" alt="TGAB/Covemex">
-						</div>
-						<div class="descripcion">
-							<p class="nombre">Tgab/Covemex</p>
-							<p class="categoria">Help Desk</p>
-						</div>
+				<div class="stack">
+					<article class="stack__group">
+						<h3>Backend</h3>
+						<ul class="chips">
+							<li class="chip chip--solid">PHP · Laravel</li>
+							<li class="chip chip--solid">C# · ASP.NET Core</li>
+							<li class="chip chip--solid">Entity Framework</li>
+						</ul>
+					</article>
+					<article class="stack__group">
+						<h3>Bases de datos y reportes</h3>
+						<ul class="chips">
+							<li class="chip chip--solid">SQL Server</li>
+							<li class="chip chip--solid">Reporting Services</li>
+							<li class="chip chip--solid">SSIS</li>
+							<li class="chip">MySQL</li>
+						</ul>
+					</article>
+					<article class="stack__group">
+						<h3>Frontend y móvil</h3>
+						<ul class="chips">
+							<li class="chip chip--solid">Vue</li>
+							<li class="chip chip--solid">JavaScript</li>
+							<li class="chip chip--solid">HTML · CSS</li>
+							<li class="chip chip--solid">Blade</li>
+							<li class="chip chip--solid">Bootstrap</li>
+							<li class="chip">Blazor</li>
+							<li class="chip">Flutter</li>
+						</ul>
+					</article>
+				</div>
+
+				<p class="tools">
+					<strong>Herramientas</strong>
+					<span>Git · Azure DevOps / TFS · Servidores Windows</span>
+				</p>
+			</div>
+		</section>
+
+		<!-- Proyectos -->
+		<section class="section section--white" id="trabajos">
+			<div class="container">
+				<div class="section__head">
+					<div>
+						<p class="eyebrow">03 · Proyectos</p>
+						<h2 class="section__title">Casos reales, en producción</h2>
 					</div>
+					<p class="section__intro">Cada proyecto cuenta el problema, lo que construí y el resultado para el cliente.</p>
+				</div>
 
-					<div class="trabajo">
-						<div class="thumb">
-							<img src="img/proyectos/adn.png" width="300" height="200" alt="ADN">
+				<div class="projects">
+					<article class="project">
+						<div class="project__logo">
+							<img src="img/proyectos/covemex.png" width="240" height="97" alt="Logotipo de Covemex" loading="lazy">
 						</div>
-						<div class="descripcion">
-							<p class="nombre">ADN Digital</p>
-							<p class="categoria">Facturación y Cartas Porte</p>
+						<div class="project__body">
+							<p class="project__client">Covemex</p>
+							<h3 class="project__title">ERP Regina</h3>
+							<dl class="project__case">
+								<dt>Problema</dt><dd>No contaban con una herramienta para gestionar su información interna.</dd>
+								<dt>Qué hice</dt><dd>Desarrollé una plataforma para registrar la producción, los empleados y los proveedores de la empresa.</dd>
+								<dt>Resultado</dt><dd>Informes de producción generados desde el sistema y gestión centralizada de proveedores.</dd>
+							</dl>
+							<ul class="chips chips--small">
+								<li class="chip">Laravel</li>
+								<li class="chip">SQL Server</li>
+							</ul>
 						</div>
-					</div>
+					</article>
 
-					<div class="trabajo">
-						<div class="thumb">
-							<img src="img/proyectos/yutaka.png" width="300" height="200" alt="Yutaka de México">
+					<article class="project">
+						<div class="project__logo">
+							<img src="img/proyectos/grupo_u.png" width="176" height="174" alt="Logotipo de TGAB / Covemex" loading="lazy">
 						</div>
-						<div class="descripcion">
-							<p class="nombre">Yutaka</p>
-							<p class="categoria">Digitalización de procesos</p>
+						<div class="project__body">
+							<p class="project__client">TGAB / Covemex</p>
+							<h3 class="project__title">Help Desk</h3>
+							<dl class="project__case">
+								<dt>Problema</dt><dd>La plataforma de soporte era obsoleta y el departamento de TI no podía demostrar el trabajo que realizaba.</dd>
+								<dt>Qué hice</dt><dd>Desarrollé un sistema de tickets para que los usuarios de la empresa registren y den seguimiento a sus solicitudes.</dd>
+								<dt>Resultado</dt><dd>Los usuarios consultan sus solicitudes de forma rápida y sencilla, y TI cuenta con un registro que respalda su trabajo.</dd>
+							</dl>
+							<ul class="chips chips--small">
+								<li class="chip">Laravel</li>
+								<li class="chip">SQL Server</li>
+							</ul>
 						</div>
-					</div>
+					</article>
 
+					<article class="project">
+						<div class="project__logo">
+							<img src="img/proyectos/adn.png" width="5333" height="3333" alt="Logotipo de ADN Digital" loading="lazy">
+						</div>
+						<div class="project__body">
+							<p class="project__client">ADN Digital</p>
+							<h3 class="project__title">Facturación y Cartas Porte</h3>
+							<dl class="project__case">
+								<dt>Problema</dt><dd>Los negocios necesitaban emitir y gestionar sus facturas y cartas porte, requisito fiscal del SAT, desde un solo lugar.</dd>
+								<dt>Qué hice</dt><dd>Desarrollé, junto con el equipo, una plataforma de facturación y cartas porte que cada negocio adapta a sus necesidades.</dd>
+								<dt>Resultado</dt><dd>Un sistema escalable que se ajusta a cada empresa que lo contrata.</dd>
+							</dl>
+							<ul class="chips chips--small">
+								<li class="chip">Laravel</li>
+								<li class="chip">SQL Server</li>
+							</ul>
+						</div>
+					</article>
+
+					<article class="project">
+						<div class="project__logo">
+							<img src="img/proyectos/yutaka.png" width="1180" height="225" alt="Logotipo de Yutaka de México" loading="lazy">
+						</div>
+						<div class="project__body">
+							<p class="project__client">Yutaka · Industria automotriz</p>
+							<h3 class="project__title">DIGIMAS · Digital Management System</h3>
+							<dl class="project__case">
+								<dt>Problema</dt><dd>La información de los asociados estaba repartida entre los distintos departamentos de la empresa.</dd>
+								<dt>Qué hice</dt><dd>Participo en el desarrollo de DIGIMAS, un ERP con módulos para Recursos Humanos, Producción y Capacitación, en web y móvil.</dd>
+								<dt>Resultado</dt><dd>Información de los asociados centralizada, métricas clave para cada departamento y herramientas que usa el área de producción.</dd>
+							</dl>
+							<ul class="chips chips--small">
+								<li class="chip">Vue</li>
+								<li class="chip">.NET</li>
+								<li class="chip">Flutter</li>
+								<li class="chip">SQL Server</li>
+								<li class="chip">Reporting Services</li>
+								<li class="chip">Git</li>
+							</ul>
+						</div>
+					</article>
 				</div>
 			</div>
 		</section>
-	</section>
 
-	<button class='scroll-top-btn hidden'>&#11014;</button>
+		<!-- Experiencia -->
+		<section class="section" id="experiencia">
+			<div class="container split">
+				<div class="split__head">
+					<p class="eyebrow">04 · Experiencia</p>
+					<h2 class="section__title">Trayectoria</h2>
+					<a href="./assets/cv_dms.pdf" target="_blank" rel="noopener" class="link">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+						CV completo en PDF
+					</a>
+				</div>
+				<ol class="timeline split__body">
+					<li class="timeline__item timeline__item--current">
+						<span class="timeline__date">2022 — hoy</span>
+						<div>
+							<h3 class="timeline__role">Block Leader MIS · <span>Yutaka</span></h3>
+							<p>Desarrollo de DIGIMAS, ERP con módulos de Recursos Humanos, Producción y Capacitación, en web (Vue y .NET) y móvil (Flutter).</p>
+						</div>
+					</li>
+					<li class="timeline__item">
+						<span class="timeline__date">2019 — 2022</span>
+						<div>
+							<h3 class="timeline__role">Analista Desarrollador · <span>Covemex / TGAB</span></h3>
+							<p>Desarrollé el ERP Regina para producción, empleados y proveedores, y el sistema de tickets Help Desk para el departamento de TI.</p>
+						</div>
+					</li>
+					<li class="timeline__item">
+						<span class="timeline__date">2018 — 2023</span>
+						<div>
+							<h3 class="timeline__role">Full Stack Developer · <span>ADN Digital</span></h3>
+							<p>Desarrollo, junto con el equipo, de la plataforma de facturación y cartas porte que cada empresa adapta a sus necesidades.</p>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
+	</main>
 
-	<footer>
+	<button class="scroll-top-btn hidden" type="button" aria-label="Volver arriba">
+		<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+	</button>
+
+	<!-- Contacto y pie -->
+	<footer class="footer">
 		<section class="contact" id="contacto">
-			<div class="container">
-				<h3 class="title">Contacto</h3>
-				<form class="form--contact">
-					<input type="text"
-						placeholder="Nombre"
-						title="Acepta letras y números"
-						name="nombre"
-						required
-						autocomplete="off"
-						pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
-						>
-
-					<input type="email"
-						placeholder="Correo"
-						title="Correo"
-						name="correo"
-						required
-						autocomplete="off">
-
-					<textarea
-						name="mensaje"
-						title="Mensaje"
-						placeholder="Mensaje" autocomplete="off"></textarea>
-
-					<input class="boton" type="submit" value="Enviar">
-				</form>
-
-				<div class="contact-form-loader text-center none">
-					<center>
-						<img src="img/loader.svg" alt="Enviando">
-					</center>
+			<div class="container contact__grid">
+				<div class="contact__text">
+					<p class="eyebrow eyebrow--light">05 · Contacto</p>
+					<h2 class="contact__title">¿Tienes un proceso que automatizar?</h2>
+					<p class="contact__lead">Cuéntame qué necesitas y te respondo en menos de 24 horas.</p>
+					<div class="social">
+						<a href="https://www.linkedin.com/in/daniel-martinez-sierra-headcruser/" target="_blank" rel="noopener" aria-label="LinkedIn">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+						</a>
+						<a href="https://github.com/headcruser/" target="_blank" rel="noopener" aria-label="GitHub">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+						</a>
+						<a href="https://www.instagram.com/headcruser87/" target="_blank" rel="noopener" aria-label="Instagram">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+						</a>
+					</div>
 				</div>
 
-				<article id="gracias" class="modal">
-					<div class="modal-content">
-						<article class="contact-form-response">
-							<h3>!Muchas Gracias! <br> por tus comentarios</h3>
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12,18c4,0,5-4,5-4H7C7,14,8,18,12,18z"/><path d="M12,2C6.486,2,2,6.486,2,12c0,5.514,4.486,10,10,10s10-4.486,10-10C22,6.486,17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8 s3.589-8,8-8s8,3.589,8,8S16.411,20,12,20z"/><path d="M13 12l2 .012C15.012 11.55 15.194 11 16 11s.988.55 1 1h2c0-1.206-.799-3-3-3S13 10.794 13 12zM8 11c.806 0 .988.55 1 1h2c0-1.206-.799-3-3-3s-3 1.794-3 3l2 .012C7.012 11.55 7.194 11 8 11z"/></svg>
-						</article>
+				<form class="form--contact">
+					<div class="form__row">
+						<label class="field">
+							<span>Nombre</span>
+							<input type="text"
+								placeholder="Tu nombre"
+								title="Solo se aceptan letras y espacios"
+								name="nombre"
+								required
+								autocomplete="name"
+								pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+						</label>
+						<label class="field">
+							<span>Correo</span>
+							<input type="email"
+								placeholder="tu@correo.com"
+								title="Correo"
+								name="correo"
+								required
+								autocomplete="email">
+						</label>
 					</div>
-				</article>
+					<label class="field">
+						<span>Mensaje</span>
+						<textarea
+							name="mensaje"
+							title="Mensaje"
+							placeholder="Cuéntame sobre tu proyecto"
+							required></textarea>
+					</label>
 
+					<button class="btn btn--primary btn--block" type="submit">
+						Enviar mensaje
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+					</button>
+
+					<div class="contact-form-loader none">
+						<img src="img/loader.svg" alt="Enviando">
+					</div>
+				</form>
 			</div>
 		</section>
-		<section class="social-network">
-			<div class="container">
-				<a href="https://www.linkedin.com/in/daniel-martinez-sierra-headcruser/" target="_blank" rel="noopener" class="linkedin"> <i class="fab fa-linkedin"></i></a>
-				<a href="https://github.com/headcruser/" target="_blank" rel="noopener" class="git"><i class="fab fa-github"></i></a>
-				<a href="https://www.instagram.com/headcruser87/" class="ins"> <i class="fab fa-instagram-square"></i></a>
-			</div>
-		</section>
+
+		<div class="container footer__bar">
+			<span>© <span class="year">2026</span> Daniel Martínez Sierra</span>
+			<span class="footer__domain">headcruser.com</span>
+		</div>
 	</footer>
+
+	<article id="gracias" class="modal">
+		<div class="modal-content">
+			<article class="contact-form-response">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+				<h3>¡Muchas gracias!</h3>
+				<p>Recibí tu mensaje, te responderé pronto.</p>
+			</article>
+		</div>
+	</article>
 
 	<script src="./js/app.js"></script>
 </body>

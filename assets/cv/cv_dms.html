@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>CV · Daniel Martínez Sierra</title>
+	<!-- Fuentes locales para poder imprimir sin conexión (ver fonts/fonts.css) -->
+	<link href="fonts/fonts.css" rel="stylesheet">
+	<style>
+		/* Mismos tokens que css/app.css */
+		:root{
+			--main-color: #1D5BD8;
+			--second-color: #15171C;
+			--white-color: #fff;
+			--bg-color: #F5F3EE;
+			--line-color: #DEDAD1;
+			--text-color: #33373F;
+			--muted-color: #4A4F59;
+
+			--font-display: "Bricolage Grotesque", "IBM Plex Sans", sans-serif;
+			--font-body: "IBM Plex Sans", system-ui, sans-serif;
+			--font-mono: "JetBrains Mono", ui-monospace, monospace;
+		}
+
+		@page{
+			size: letter;
+			margin: 0;
+		}
+
+		*{
+			box-sizing: border-box;
+		}
+
+		html,
+		body{
+			margin: 0;
+			-webkit-print-color-adjust: exact;
+			print-color-adjust: exact;
+		}
+
+		body{
+			background: #888;
+			color: var(--second-color);
+			font-family: var(--font-body);
+			font-size: 9.6pt;
+			line-height: 1.45;
+		}
+
+		a{
+			color: inherit;
+			text-decoration: none;
+		}
+
+		h1, h2, h3{
+			margin: 0;
+			font-family: var(--font-display);
+			letter-spacing: -0.02em;
+		}
+
+		p, ul{
+			margin: 0;
+		}
+
+		.page{
+			width: 8.5in;
+			height: 11in;
+			margin: 0 auto;
+			overflow: hidden;
+			background: var(--white-color);
+			display: grid;
+			grid-template-rows: auto 1fr;
+		}
+
+		@media screen{
+			.page{
+				margin: 24px auto;
+				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+			}
+		}
+
+		/************************** Encabezado ******************************/
+		.header{
+			padding: 0.5in 0.55in 0.3in;
+			border-bottom: 1px solid var(--line-color);
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+
+		.mark{
+			width: 64px;
+			height: 64px;
+			flex-shrink: 0;
+			border-radius: 16px;
+			background: var(--second-color);
+			color: var(--bg-color);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: var(--font-display);
+			font-weight: 800;
+			font-size: 26px;
+		}
+
+		.header__name{
+			font-weight: 800;
+			font-size: 28pt;
+			line-height: 1;
+			letter-spacing: -0.03em;
+		}
+
+		.header__role{
+			margin-top: 6px;
+			font-family: var(--font-display);
+			font-weight: 700;
+			font-size: 13pt;
+			color: var(--main-color);
+		}
+
+		.contact{
+			display: flex;
+			flex-wrap: wrap;
+			gap: 4px 16px;
+			margin-top: 10px;
+			padding: 0;
+			list-style: none;
+			font-size: 8.6pt;
+			color: var(--muted-color);
+		}
+
+		.contact li{
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+
+		.contact svg{
+			width: 11px;
+			height: 11px;
+			fill: none;
+			stroke: var(--main-color);
+			stroke-width: 2;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+		}
+
+		/************************** Cuerpo ******************************/
+		.body{
+			display: grid;
+			grid-template-columns: 1fr 2.35in;
+		}
+
+		.main{
+			padding: 0.3in 0.35in 0.4in 0.55in;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		.side{
+			padding: 0.3in 0.4in 0.4in 0.3in;
+			background: var(--bg-color);
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		.eyebrow{
+			margin-bottom: 10px;
+			font-family: var(--font-mono);
+			font-size: 7.6pt;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: var(--main-color);
+		}
+
+		.profile{
+			font-size: 10pt;
+			line-height: 1.6;
+			color: var(--text-color);
+		}
+
+		/************************** Experiencia ******************************/
+		.timeline{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.job{
+			position: relative;
+			padding: 0 0 14px 20px;
+		}
+
+		.job:last-child{
+			padding-bottom: 0;
+		}
+
+		/* Línea vertical */
+		.job::before{
+			content: "";
+			position: absolute;
+			left: 4px;
+			top: 14px;
+			bottom: 0;
+			width: 1.5px;
+			background: var(--line-color);
+		}
+
+		.job:last-child::before{
+			display: none;
+		}
+
+		/* Punto */
+		.job::after{
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 4px;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			border: 1.5px solid var(--second-color);
+			background: var(--white-color);
+			box-sizing: border-box;
+		}
+
+		.job--current::after{
+			border-color: var(--main-color);
+			background: var(--main-color);
+		}
+
+		.job__head{
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			gap: 12px;
+		}
+
+		.job__role{
+			font-size: 11.5pt;
+			font-weight: 700;
+		}
+
+		.job__date{
+			flex-shrink: 0;
+			font-family: var(--font-mono);
+			font-size: 7.6pt;
+			color: var(--muted-color);
+		}
+
+		.job__company{
+			margin-top: 1px;
+			font-weight: 600;
+			font-size: 9.2pt;
+			color: var(--muted-color);
+		}
+
+		.job__company span{
+			font-weight: 400;
+		}
+
+		.job ul{
+			margin-top: 5px;
+			padding-left: 14px;
+			color: var(--text-color);
+		}
+
+		.job li{
+			margin-bottom: 2px;
+		}
+
+		.job li::marker{
+			color: var(--main-color);
+		}
+
+		.chips{
+			display: flex;
+			flex-wrap: wrap;
+			gap: 4px;
+			margin-top: 6px;
+			padding: 0;
+			list-style: none;
+			font-family: var(--font-mono);
+			font-size: 7pt;
+		}
+
+		.chip{
+			padding: 2px 6px;
+			border-radius: 4px;
+			border: 1px solid var(--line-color);
+			background: var(--bg-color);
+		}
+
+		.chip--solid{
+			border-color: var(--second-color);
+			background: var(--second-color);
+			color: var(--bg-color);
+		}
+
+		/************************** Barra lateral ******************************/
+		.side h3{
+			margin-bottom: 6px;
+			font-size: 10pt;
+			font-weight: 700;
+		}
+
+		.side .chips{
+			margin: 0 0 12px;
+		}
+
+		.side .chip{
+			background: var(--white-color);
+			border-color: var(--second-color);
+		}
+
+		.side .chip--solid{
+			background: var(--second-color);
+		}
+
+		.legend{
+			display: flex;
+			gap: 10px;
+			margin-top: 2px;
+			font-size: 7.4pt;
+			color: var(--muted-color);
+		}
+
+		.legend span{
+			display: flex;
+			align-items: center;
+			gap: 4px;
+		}
+
+		.legend i{
+			width: 8px;
+			height: 8px;
+			border-radius: 2px;
+			border: 1px solid var(--second-color);
+		}
+
+		.legend i.solid{
+			background: var(--second-color);
+		}
+
+		.facts{
+			margin: 0;
+			display: grid;
+			gap: 8px;
+		}
+
+		.facts dt{
+			font-size: 7.8pt;
+			color: var(--muted-color);
+		}
+
+		.facts dd{
+			margin: 0;
+			font-weight: 600;
+		}
+
+		.edu__title{
+			font-weight: 600;
+		}
+
+		.edu__place{
+			color: var(--text-color);
+		}
+
+		.edu__date{
+			margin-top: 2px;
+			font-family: var(--font-mono);
+			font-size: 7.6pt;
+			color: var(--muted-color);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="page">
+		<!-- Encabezado -->
+		<header class="header">
+			<div class="mark">DM</div>
+			<div>
+				<h1 class="header__name">Daniel Martínez Sierra</h1>
+				<p class="header__role">Desarrollador de software · Full Stack</p>
+				<ul class="contact">
+					<li>
+						<svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+						Celaya, Gto., México
+					</li>
+					<li>
+						<svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+						<a href="tel:+524613585890">(461) 358 5890</a>
+					</li>
+					<li>
+						<svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+						<a href="mailto:headcruser@gmail.com">headcruser@gmail.com</a>
+					</li>
+					<li>
+						<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+						<a href="https://headcruser.com/">headcruser.com</a>
+					</li>
+					<li>
+						<svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+						<a href="https://www.linkedin.com/in/daniel-martinez-sierra-headcruser/">in/daniel-martinez-sierra-headcruser</a>
+					</li>
+					<li>
+						<svg viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+						<a href="https://github.com/headcruser/">github.com/headcruser</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<div class="body">
+			<main class="main">
+				<!-- Perfil -->
+				<section>
+					<p class="eyebrow">Perfil</p>
+					<p class="profile">
+						Desarrollador de software desde 2018. Construyo sistemas para empresas que buscan hacer
+						más eficientes sus procesos internos: facturación, mesa de ayuda, ERP y digitalización
+						de flujos internos. Mi compromiso es entregar productos que realmente apoyen al cliente
+						final en su trabajo diario.
+					</p>
+				</section>
+
+				<!-- Experiencia -->
+				<section>
+					<p class="eyebrow">Experiencia</p>
+					<ol class="timeline">
+						<li class="job job--current">
+							<div class="job__head">
+								<h2 class="job__role">Block Leader MIS</h2>
+								<span class="job__date">JUL 2022 — ACTUALIDAD</span>
+							</div>
+							<p class="job__company">Yutaka México <span>· Apaseo el Grande, Gto.</span></p>
+							<ul>
+								<li>Participo en el desarrollo de <strong>DIGIMAS</strong> (Digital Management System), ERP con módulos de Recursos Humanos, Producción y Capacitación.</li>
+								<li>Centraliza la información de los asociados, entrega métricas clave a cada departamento e incluye herramientas para el área de producción y el control documental.</li>
+								<li>Plataforma web en Vue y .NET, con aplicación móvil en Flutter.</li>
+							</ul>
+							<ul class="chips">
+								<li class="chip">Vue</li>
+								<li class="chip">.NET</li>
+								<li class="chip">Flutter</li>
+								<li class="chip">SQL Server</li>
+								<li class="chip">Reporting Services</li>
+								<li class="chip">Git</li>
+							</ul>
+						</li>
+
+						<li class="job">
+							<div class="job__head">
+								<h2 class="job__role">Analista Desarrollador</h2>
+								<span class="job__date">FEB 2019 — JUL 2022</span>
+							</div>
+							<p class="job__company">Covemex / TGAB <span>· Apaseo el Grande, Gto.</span></p>
+							<ul>
+								<li>Desarrollé <strong>ERP Regina</strong>, plataforma para registrar producción, empleados y proveedores, con informes de lo producido.</li>
+								<li>Desarrollé una aplicación móvil en Android para registrar la producción en tiempo real.</li>
+								<li>Desarrollé el <strong>Help Desk</strong> de tickets que reemplazó la plataforma obsoleta y respalda el trabajo del departamento de TI.</li>
+							</ul>
+							<ul class="chips">
+								<li class="chip">Laravel</li>
+								<li class="chip">SQL Server</li>
+								<li class="chip">Android</li>
+							</ul>
+						</li>
+
+						<li class="job">
+							<div class="job__head">
+								<h2 class="job__role">Full Stack Developer</h2>
+								<span class="job__date">2018 — 2023</span>
+							</div>
+							<p class="job__company">ADN Digital</p>
+							<ul>
+								<li>Desarrollo, junto con el equipo, de la plataforma de <strong>facturación y cartas porte</strong> (requisito fiscal del SAT).</li>
+								<li>Sistema escalable que se adapta a las necesidades de cada empresa que lo contrata.</li>
+							</ul>
+							<ul class="chips">
+								<li class="chip">Laravel</li>
+								<li class="chip">SQL Server</li>
+							</ul>
+						</li>
+
+						<li class="job">
+							<div class="job__head">
+								<h2 class="job__role">Programador</h2>
+								<span class="job__date">MAR 2018 — ENE 2019</span>
+							</div>
+							<p class="job__company">A&amp;C Productos Informáticos <span>· Celaya, Gto.</span></p>
+							<ul>
+								<li>Apoyo en el desarrollo de sistemas web a la medida del cliente.</li>
+							</ul>
+							<ul class="chips">
+								<li class="chip">Laravel</li>
+							</ul>
+						</li>
+					</ol>
+				</section>
+			</main>
+
+			<aside class="side">
+				<!-- Stack -->
+				<section>
+					<p class="eyebrow">Stack</p>
+
+					<h3>Backend</h3>
+					<ul class="chips">
+						<li class="chip chip--solid">PHP · Laravel</li>
+						<li class="chip chip--solid">C# · ASP.NET Core</li>
+						<li class="chip chip--solid">Entity Framework</li>
+					</ul>
+
+					<h3>Bases de datos y reportes</h3>
+					<ul class="chips">
+						<li class="chip chip--solid">SQL Server</li>
+						<li class="chip chip--solid">Reporting Services</li>
+						<li class="chip chip--solid">SSIS</li>
+						<li class="chip">MySQL</li>
+					</ul>
+
+					<h3>Frontend y móvil</h3>
+					<ul class="chips">
+						<li class="chip chip--solid">Vue</li>
+						<li class="chip chip--solid">JavaScript</li>
+						<li class="chip chip--solid">HTML · CSS</li>
+						<li class="chip chip--solid">Blade</li>
+						<li class="chip chip--solid">Bootstrap</li>
+						<li class="chip">Blazor</li>
+						<li class="chip">Flutter</li>
+					</ul>
+
+					<h3>Herramientas</h3>
+					<ul class="chips">
+						<li class="chip chip--solid">Git</li>
+						<li class="chip chip--solid">Azure DevOps / TFS</li>
+						<li class="chip">Servidores Windows</li>
+					</ul>
+
+					<div class="legend">
+						<span><i class="solid"></i>Uso diario</span>
+						<span><i></i>Conocimiento</span>
+					</div>
+				</section>
+
+				<!-- Formación -->
+				<section>
+					<p class="eyebrow">Formación</p>
+					<p class="edu__title">Ingeniería en Sistemas Computacionales</p>
+					<p class="edu__place">Instituto Tecnológico de Celaya</p>
+					<p class="edu__date">2013 — 2017</p>
+				</section>
+
+				<!-- Datos -->
+				<section>
+					<p class="eyebrow">Datos</p>
+					<dl class="facts">
+						<div>
+							<dt>Idiomas</dt>
+							<dd>Español · Inglés intermedio</dd>
+						</div>
+						<div>
+							<dt>Modalidad</dt>
+							<dd>Híbrido</dd>
+						</div>
+						<div>
+							<dt>Disponibilidad</dt>
+							<dd>Abierto a nuevas oportunidades</dd>
+						</div>
+					</dl>
+				</section>
+			</aside>
+		</div>
+	</div>
+</body>
+
+</html>
